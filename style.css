@@ -1,0 +1,684 @@
+/*  Configuración Global  */
+
+* {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*  Menú  */
+
+body {
+    background-color: #2d2d2d;
+}
+
+.header {
+    width: 100%;
+    background-color: #cad42d;
+    position: fixed;
+    z-index: 1;
+}
+
+.header_nav {
+    display: flex;
+/*"justify-content: space-between;" sirve para separar a los hijos lo maximo posible dependiendo de el "widtdt: ;", si es de un 100%, el cual este es el caso, y son 3 hijos, el primero estaria en la posición 0, el segundo en la posición 50 y el tercero en la posición 100*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_icon {
+    margin-left: 20px;
+}
+/*aca estoy llamando al padre y al hijo, para asignarles lo determindado, para que se acomode a las condiciones*/
+.nav_icon, .nav_icon img {
+    width: 50px;
+    height: 50px;
+/*las transiciones en CSS, tienen como minímo 3 parametros, el cual el primero de ellos conllevaria a decir que, que objeto quiero que transicione en este caso yo puse "all" osea quiero que toda la caja transicione, el segundo seria el tiempo en segundos de la transición y el tercero seria ya el estilo de la animación, en este caso yo puse el predeterminado que es es "ease"*/
+    transition: all 0.3s ease;
+}
+/*hover, traducido como "encima", es un envento en css, es cuando pasas el mouse por un elemente de html, y se dispara el elemento*/
+
+.icon-image {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    transition: all 0.2s linear;
+}
+
+.icon-image:hover {
+    /* filter es una propiedad que sirve  aplicar efectos gráficos visuales a un elemento, como desenfoque, brillo, etc. en este caso yo use drop-shadow que es para darle una sombra ah el icono, el primer 0 es para definirlo a la x, y el segundo 0 es para definirselo a la y, los 5px son el difuminado de la sombra, hay una una cuarta que es antes del color que para saber que tanto va a estar expandida la sombra, pero en mi caso no quise ponerla, lo vi  innecesario, y el quinto es para darle el color a la sombra*/
+    filter: drop-shadow(0 0 5px #000);
+    font-size: 17px;
+}
+
+.nav_enlaces {
+    width: 50%;
+    display: flex;
+/*justify-content: space-around, sirve para  distribuir el espacio libre entre los elementos flexibles, dejando un espacio igual al inicio y al final del contenedor, así como entre los elementos*/
+    justify-content: space-around;
+}
+
+.enlaces {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+}
+
+.enlaces:hover {
+    filter: drop-shadow(0 0 5px #000);
+    font-size: 20px;
+}
+
+/*  Sección De Introducción  */
+
+.main_intro {
+    padding: 5%;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    background-image: url(hero.webp);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    height: 580px;
+}
+
+.intro-secciones h1 {
+    font-size: 2rem;
+    margin-right: 70%;
+}
+
+.intro-secciones h2 {
+    transform: translateY(-560px);
+    margin-left: 40%;
+    font-size: 2rem;
+}
+
+.intro-secciones p {
+    transform: translateY(-535px);
+    margin-left: 40%;
+}
+
+.secciones-beneficios {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.intro-secciones li {
+    transform: translateY(-525px);
+    margin-left: 40%;
+    list-style-type: none;
+    font-size: 30px;
+}
+
+.intro-secciones li:hover {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+.intro-secciones img {
+    width: 185px;
+    height: 460px;
+    margin-right: 75%;
+}
+
+.boton-servicios {
+    background-color: #e0e0e0;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transform: translateY(-815px);
+    margin-right: 53%;
+}
+
+.boton-servicios:hover {
+    background-color: #DAF7A6;
+}
+
+/*  Estilo Para El Carrusel  */
+#destacados {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.destacados_destacados {
+    position: absolute;
+}
+
+.destacados_carrusel {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    display: flex;
+    flex: 0 0 100%;
+}
+
+.carrusel-item img {
+    width: 400px;
+    height: 500px;
+    display: block;
+}
+
+.carrusel-item video {
+    width: 400px;
+    height: 500px;
+    display: block;
+}
+
+.carrusel-item figcaption {
+    color: #fff;
+    font-size: 30px;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+
+/*  Navegación Del Carrusel  */
+.botones_manejo-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+}
+
+.manejo-botones-1 {
+    background-color: #cad42d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.manejo-botones-1:hover {
+    background-color: #DAF7A6;
+    color: #1a1a1a;
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicadores button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicadores button.activo {
+    background-color: #181717;
+}
+
+#servicios {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.title-2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.servicios_carrusel {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-p {
+    min-width: 100%;
+    padding: 1rem;
+    display: flex;
+    box-sizing: border-box;
+    background-color:  #131312;
+    border-radius: 10px;
+    color: #fff;
+    justify-content: center;
+}
+
+.botones-servicios {
+    background-color: #e0e0e0;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botones-servicios:hover {
+    background-color: #DAF7A6;
+}
+
+.carrusel-p li {
+    font-size: 140%;
+}
+
+.botones_manejo-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+}
+
+.manejo-botones-2 {
+    background-color: #cad42d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.manejo-botones-2:hover {
+    background-color: #DAF7A6;
+    color: #1a1a1a;
+}
+
+.indi {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5%;
+    transform: translateY(-40px);
+}
+
+.indi button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indi button.activo {
+    background-color: #181717;
+}
+
+/*  Estilo Para El Carrusel  */
+#productos {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.title {
+    padding: 5%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.productos_carrusel {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px #000);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.carrusel_caja {
+    background-color: #000;
+}
+
+.caja-title label {
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    font-weight: 600;
+    cursor: text;
+}
+
+.title-blanco {
+    color: #000;
+    font-size: 20px;
+}
+
+.caja-productos {
+    min-width: 100%;
+    flex: 0 0 calc(100% / 3);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.producto-title {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+
+.caja-productos:hover .producto-title {
+    color: #3483fa;
+}
+
+.producto-precio {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.caja-productos img {
+    width: 298.8px;
+    height: 385px;
+    display: block;
+}
+
+.caja-productos figcaption {
+    margin-top: 10%;
+    margin-right: 20%;
+}
+
+/*  Navegación Del Carrusel  */
+
+.manejo-botones-3 {
+    background-color: #cad42d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 30%;
+}
+
+.manejo-botones-3:hover {
+    background-color: #DAF7A6;
+    color: #1a1a1a;
+}
+
+.punteado {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translateY(-40px);
+}
+
+.punteado button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punteado button.activo {
+    background-color: #181717;
+}
+
+.pie_pagina p {
+    flex-direction: column;
+}
+
+#mapa-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#mapa-contenedor .title-2 {
+    font-size: 35px;
+}
+
+#mapa-contenedor iframe {
+    width: 600px;
+    height: 450px;
+}
+
+
+/*  Estilo Para El Carrusel  */
+#nosotros {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.nosotros_carrusel {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carrusel-chicos {
+    min-width: 100%;
+    display: flex;
+    flex: 0 0 100%;
+}
+
+.carrusel-chicos img {
+    width: 300px;
+    height: 485px;
+    display: block;
+}
+
+.carrusel-chicos figcaption {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.manejo-botones-4 {
+    background-color: #cad42d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 30%;
+}
+
+.manejo-botones-4:hover {
+    background-color: #DAF7A6;
+    color: #1a1a1a;
+}
+
+.punteo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transform: translateY(-40px);
+}
+
+.punteo button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punteo button.activo {
+    background-color: #181717;
+}
+
+.footer {
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    color: #cad42d;
+}
+
+.footer-enlaces {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-enlaces a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-enlaces a:hover {
+    color: #ffff00;
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media screen and (max-width: 720px) {
+        .header_nav {
+        flex-direction: column;
+    }
+
+    .nav_icon {
+        margin: 0;
+    }
+
+    .nav_enlaces {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_intro {
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .intro-secciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    /* Mostrar beneficios primero */
+    .secciones-beneficios {
+        order: 1;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .intro-secciones ul {
+        order: 2;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .intro-secciones li {
+        font-size: 1rem;
+        margin: 5px 0;
+        text-align: center;
+        transform: none;
+    }
+
+    .intro-secciones img {
+        order: 3;
+        width: 150px;
+        height: auto;
+        margin: 15px auto;
+    }
+
+    .boton-servicios {
+        order: 4;
+        width: 80%;
+        font-size: 1rem;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .intro-secciones h1,
+    .intro-secciones h2,
+    .intro-secciones p {
+        display: none; /* ocultamos encabezados en móvil */
+    }
+
+
+    .carrusel-p li {
+        font-size: 7px;
+    }
+    .carrusel-item figcaption {
+        font-size: 0.8rem;
+    }
+    .producto-title,.producto-precio {
+        font-size: 8px;
+    }
+
+    .caja-productos img {
+        width: 68.5px;
+        height: 65px;
+    }
+    .carrusel-item img,
+    .carrusel-item video {
+        width: 300%;
+        height: auto;
+    }
+
+    #servicios .title-2 {
+        font-size: 15px;
+    }
+
+    .carrusel-p h3 {
+        font-size: 13px;
+    }
+
+        /* Carrusel de nosotros */
+    .carrusel-chicos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #mapa-contenedor .title-2, .title {
+        font-size: 15px;
+}
+
+    #mapa-contenedor iframe {
+        width: 400px;
+        height: 250px;
+}
+
+    .carrusel-chicos img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .carrusel-chicos figcaption {
+        font-size: 1rem;
+    }
+}
