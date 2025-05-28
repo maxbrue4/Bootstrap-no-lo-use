@@ -108,7 +108,7 @@ body {
     transform: translateY(-525px);
     margin-left: 40%;
     list-style-type: none;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .intro-secciones li:hover {
@@ -127,7 +127,7 @@ body {
     border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
-    transform: translateY(-815px);
+    transform: translateY(-900px);
     margin-right: 53%;
 }
 
@@ -475,6 +475,10 @@ a {
     margin-left: 10%;
 }
 
+.carrusel-chicos a:hover {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
 .manejo-botones-4 {
     background-color: #cad42d;
     border: none;
@@ -556,17 +560,17 @@ a {
     color: #ffff00;
 }
 
-/* Móviles pequeños (hasta 480px) */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 915px) {
         .header_nav {
         flex-direction: column;
     }
 
     .nav_icon {
-        margin: 0;
+        margin-right: 15%;
     }
 
     .nav_enlaces {
+        margin: 0;
         flex-direction: column;
         align-items: center;
     }
@@ -574,7 +578,10 @@ a {
     .main_intro {
         background-size: cover;
         background-position: center;
-        height: auto;
+        background-image: url(hero.webp);
+        background-size: 100% 100vh;
+        background-repeat: no-repeat;
+        height: 1087px;
         padding: 30px 10px;
     }
 
@@ -593,8 +600,27 @@ a {
         margin-bottom: 10px;
     }
 
+    .intro-secciones h1 {
+        transform: translateY(560px);
+        margin-left: 70%;
+        font-size: 1.1rem;
+    }
+
+    .intro-secciones h2 {
+        transform: translateY(-15px);
+        margin-right: 32%;
+        font-size: 1rem;
+    }
+
+    .intro-secciones p {
+        transform: translateY(-60px);
+        margin-right: 32%;
+        font-size: 0.9rem;
+    }
+
     .intro-secciones ul {
         order: 2;
+        transform: translateY(-60px);
         list-style-type: none;
         padding: 0;
     }
@@ -608,52 +634,85 @@ a {
 
     .intro-secciones img {
         order: 3;
-        width: 150px;
-        height: auto;
-        margin: 15px auto;
+        width: 143px;
+        height: 343px;
+        margin-right: 60%;
     }
 
     .boton-servicios {
-        order: 4;
-        width: 80%;
+        transform: translateY(500px);
+        margin-left: 16%;
+        width: 90%;
+        text-align: center;
         font-size: 1rem;
-        margin: 15px auto;
         display: block;
     }
 
-    .intro-secciones h1,
-    .intro-secciones h2,
-    .intro-secciones p {
-        display: none; /* ocultamos encabezados en móvil */
+    #servicios, #productos {
+        margin-top: 70%;
     }
 
-
-    .carrusel-p li {
-        font-size: 7px;
-    }
-    .carrusel-item figcaption {
-        font-size: 0.8rem;
-    }
-    .producto-title,.producto-precio {
-        font-size: 8px;
-    }
-
-    .caja-productos img {
-        width: 68.5px;
-        height: 65px;
-    }
-    .carrusel-item img,
-    .carrusel-item video {
-        width: 300%;
-        height: auto;
+    .carrusel-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     #servicios .title-2 {
         font-size: 15px;
     }
 
+    .caja-title label {
+        font-size: 12px;
+    }
+
+    .carrusel-p {
+        border-radius: 0%;
+        filter: drop-shadow(0 0 5px #000);
+    }
+
+    .carrusel-p li {
+        font-size: 7px;
+    }
+
     .carrusel-p h3 {
-        font-size: 13px;
+        width: 161%;
+        font-size: 10px;
+    }
+
+    .carrusel-p button {
+        width: 73%;
+        font-size: 12px;
+    }
+
+    .carrusel-item figcaption {
+        font-size: 0.8rem;
+    }
+
+    .producto-title, .producto-precio {
+        font-size: 8px;
+    }
+
+    .caja-productos img {
+        width: 77.5px;
+        height: 77.5px;
+    }
+
+    .caja-productos br {
+        display: none;
+    }
+
+    .carrusel-item img, .carrusel-item video {
+        width: 75%;
+        height: auto;
+    }
+
+    .producto-title, .producto-precio {
+        font-size: 6px;
+    }
+
+    .boton-izq {
+        margin-left: 22%;
     }
 
         /* Carrusel de nosotros */
@@ -679,6 +738,22 @@ a {
     }
 
     .carrusel-chicos figcaption {
-        font-size: 1rem;
+        font-size: 13.7px;
+    }
+
+    .carrusel-chicos ul {
+        list-style-type: none;
+    }
+
+    .punteo {
+        transform: translateY(-3px);
+    }
+
+    .manejo-botones-4 {
+        transform: translateY(10px);
+    }
+
+    .boton-zurdo {
+        margin-left: 22%;
     }
 }
