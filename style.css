@@ -560,7 +560,7 @@ a {
     color: #ffff00;
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 430px) {
         .header_nav {
         flex-direction: column;
     }
@@ -579,7 +579,7 @@ a {
         background-size: cover;
         background-position: center;
         background-image: url(hero.webp);
-        background-size: 100% 100vh;
+        background-size: 100% 137vh;
         background-repeat: no-repeat;
         height: 1087px;
         padding: 30px 10px;
@@ -739,6 +739,7 @@ a {
 
     .carrusel-chicos figcaption {
         font-size: 13.7px;
+        margin-right: 10%;
     }
 
     .carrusel-chicos ul {
