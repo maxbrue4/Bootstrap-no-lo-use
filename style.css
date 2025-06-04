@@ -534,7 +534,6 @@ a {
     flex: 1;
     min-width: 250px;
     margin-bottom: 20px;
-    display: flex;
 }
 
 .footer-info h3 {
@@ -547,7 +546,6 @@ a {
     flex: 1;
     min-width: 250px;
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
